@@ -1,16 +1,16 @@
 
 <!-- Style -->
 <style>
-    
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
 
     footer {
         color: #bbb;
         background-color: #555;
         line-height: 1.5;
+    }
+
+    footer ul {
+        list-style: none;
+        padding-left: 0;
     }
 
     footer a {
