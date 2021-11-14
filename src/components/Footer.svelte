@@ -114,15 +114,16 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Global Statistics</a></li>
-                <li><a href="#">Server Statistics</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Statistics</a></li>
             </ul>
         </div>
         <div class="footer-main-item">
             <h2 class="footer-title">RESOURCES</h2>
             <ul>
-                <li><a href="#">Docs</a></li>
                 <li><a href="#">Github</a></li>
+                <li><a href="#">Docs</a></li>
             </ul>
         </div>
         <div class="footer-main-item">
