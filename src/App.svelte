@@ -1,10 +1,17 @@
+
+<!---------- Script ---------->
+
 <script>
-    import Header from './components/Header.svelte';
+    
     import Navbar from './components/Navbar.svelte';
     import Footer from './components/Footer.svelte';
+
 </script>
 
+<!---------- Style ---------->
+
 <style>
+
     main {
         min-height: 100vh;
 
@@ -15,15 +22,22 @@
     }
 
     .content {
+        padding: 2rem 3.5rem 5rem;
         flex: 1;
-        padding: 5rem 2rem;
+
+        display: flex;
     }
+
 </style>
 
+<!---------- Main code ---------->
+
 <main>
-    <Header/>
     <div class="content">
         <Navbar/>
+        <div>
+            Test 123
+        </div>
     </div>
     <Footer/>
 </main>
