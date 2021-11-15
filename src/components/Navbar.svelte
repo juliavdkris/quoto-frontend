@@ -3,10 +3,12 @@
 
 <script>
 
+    import Fa from 'svelte-fa';
+    import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
     import { slide } from 'svelte/transition';
 
     var dropdown = false;
-    
+
     function clickOutside(element, callbackFunction) {
 		function onClick(event) {
 			if (!element.contains(event.target)) {
@@ -76,11 +78,6 @@
     }
 
     .dropdown {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dropdown a {
         padding-left: 3rem;
     }
 
@@ -89,7 +86,7 @@
         border-radius: 5px;
         background-color: #0E7C7B;
 
-        animation: growVerticaly 1.5s ease-out 0.5s forwards;
+        animation: growVerticaly 1s ease-out 0.5s forwards;
         transform-origin: top;
         transform: scaleY(0);
     }
@@ -110,13 +107,18 @@
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Statistics</a>
-            <div class="dropdown" use:clickOutside={ () => { dropdown = false; } }>
-                <button on:click={ () => { dropdown = !dropdown; } }>Resources</button>
+            <button on:click={ () => { dropdown = !dropdown; } } use:clickOutside={ () => { dropdown = false; } }>
+                Resources&nbsp;
                 {#if dropdown}
-                    <a href="#" transition:slide>Documentation</a>
-                    <a href="#" transition:slide>Github</a>
+                    <Fa icon={faChevronDown}/>
+                {:else}
+                    <Fa icon={faChevronRight}/>
                 {/if}
-            </div>
+            </button>
+            {#if dropdown}
+                <a href="#" class="dropdown" transition:slide>Documentation</a>
+                <a href="#" class="dropdown" transition:slide>Github</a>
+            {/if}
         </nav>
 
         <div class="spacer"></div>
