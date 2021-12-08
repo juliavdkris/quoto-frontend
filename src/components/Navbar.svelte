@@ -3,9 +3,10 @@
 
 <script>
 
+    import { slide } from 'svelte/transition';
+    import { url } from '@roxi/routify';
     import Fa from 'svelte-fa';
     import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-    import { slide } from 'svelte/transition';
 
     var dropdown = false;
 
@@ -35,7 +36,7 @@
 <style>
 
     .menu-wrapper {
-        width: 20rem;
+        width: 18rem;
     }
 
     .nav-wrapper {
@@ -104,9 +105,9 @@
 
     <div class="nav-wrapper">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Statistics</a>
+            <a href={$url('./')}>Home</a>
+            <a href={$url('./about')}>About</a>
+            <a href={$url('./statistics')}>Statistics</a>
             <button on:click={ () => { dropdown = !dropdown; } } use:clickOutside={ () => { dropdown = false; } }>
                 Resources&nbsp;
                 {#if dropdown}
@@ -116,8 +117,8 @@
                 {/if}
             </button>
             {#if dropdown}
-                <a href="#" class="dropdown" transition:slide>Documentation</a>
-                <a href="#" class="dropdown" transition:slide>Github</a>
+                <a href={$url('./documentation')} class="dropdown" transition:slide>Documentation</a>
+                <a href="https://github.com/juliavdkris/quoto-frontend" target="_blank" class="dropdown" transition:slide>Github</a>
             {/if}
         </nav>
 
