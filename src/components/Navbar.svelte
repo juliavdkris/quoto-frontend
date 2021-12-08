@@ -35,7 +35,7 @@
 <style>
 
     .menu-wrapper {
-        width: 20rem;
+        width: 18rem;
     }
 
     .nav-wrapper {

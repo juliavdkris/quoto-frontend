@@ -35,18 +35,6 @@
         flex-wrap: wrap;
     }
 
-    @media only screen and (min-width: 29.8125rem) {
-        .footer-main {
-            justify-content: space-around;
-        }
-    }
-
-    @media only screen and (min-width: 77.5rem) {
-        .ft-main {
-            justify-content: space-around;
-        }
-    }
-
     .footer-main-item {
         padding: 1.25rem;
         min-width: 12.5rem;
