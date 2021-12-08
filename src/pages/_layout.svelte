@@ -22,7 +22,7 @@
     }
 
     .content {
-        padding: 2rem 3.5rem 5rem;
+        padding: 2rem 3rem 5rem;
         flex: 1;
 
         display: flex;
@@ -35,7 +35,7 @@
 <main>
     <div class="content">
         <Navbar/>
+        <slot/>
     </div>
-    <slot />
     <Footer/>
 </main>

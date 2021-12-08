@@ -33,6 +33,8 @@
 
         display: flex;
         flex-wrap: wrap;
+
+        justify-content: space-around;
     }
 
     .footer-main-item {
